@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Web Warden",
+  "version": "1.0",
+  "description": "A pixel web-slinger who closes Instagram after your daily time limit.",
+  "permissions": ["tabs", "storage", "alarms"],
+  "host_permissions": ["*://*.instagram.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["*://*.instagram.com/*"],
+    "js": ["sprite.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": { "default_popup": "popup.html", "default_title": "Web Warden" },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+}

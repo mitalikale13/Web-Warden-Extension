@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body{margin:0;width:260px;background:#0d1226;color:#fff;font:700 13px monospace;padding:14px;text-align:center}
+canvas{image-rendering:pixelated}
+.bar{height:16px;border:3px solid #d62839;margin:10px 0;background:#14141c}
+.bar i{display:block;height:100%;background:#1d4e9e}
+input{width:60px;font:700 14px monospace;text-align:center;border:3px solid #1d4e9e;background:#14141c;color:#fff;padding:4px}
+button{font:700 13px monospace;background:#d62839;color:#fff;border:3px solid #fff;padding:6px 10px;cursor:pointer;margin:4px 2px}
+button.alt{background:#14141c}
+p{margin:6px 0}
+</style></head><body>
+<canvas id="h"></canvas>
+<p id="info">Loading…</p>
+<div class="bar"><i id="fill" style="width:0"></i></div>
+<p>Daily limit: <input id="lim" type="number" min="5" max="600"> min</p>
+<button id="save">Save limit</button><button class="alt" id="reset">Reset today</button>
+<script src="sprite.js"></script><script src="popup.js"></script>
+</body></html>
